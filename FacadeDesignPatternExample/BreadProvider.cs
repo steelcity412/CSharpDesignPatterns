@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace FacadeDesignPatternExample
 {
-    public class BreadProvider
+    /// <summary>
+    /// This is a bread provider which will get bread for their clients.
+    /// </summary>
+    public class BreadProvider : IBread
     {
+        public void GetGarlicBread()
+        {
+            Console.WriteLine("Getting Garlic Bread.");
+        }
+        public void GetCheesyGarlicBread()
+        {
+            GetCheese();
+            Console.WriteLine("Getting Cheesy Garlic Bread.");
+        }
+        private void GetCheese()
+        {
+            Console.WriteLine("Getting Cheese.");
+        }
     }
 }
